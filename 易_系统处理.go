@@ -1,4 +1,4 @@
-package ecore
+package e
 
 import (
 	"bufio"

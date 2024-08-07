@@ -1,4 +1,4 @@
-package ecore
+package e
 
 /*
 打开文件

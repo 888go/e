@@ -1,4 +1,4 @@
-package ecore
+package e
 
 import "github.com/gogf/gf/v2/container/garray"
 

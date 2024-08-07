@@ -1,4 +1,4 @@
-package ecore
+package e
 
 //定时任务
 //提供周期性任务执行功能。使用方式类似于Linux下的Crontab或者Java里的Quartz。本对象线程安全。

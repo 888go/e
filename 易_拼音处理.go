@@ -1,4 +1,4 @@
-package ecore
+package e
 
 //取所有发音
 //取发音数目
