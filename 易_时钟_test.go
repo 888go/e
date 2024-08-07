@@ -6,7 +6,7 @@ import (
 
 func TestNew时钟(t *testing.T) {
 	return
-	时钟 := New时钟()
+	时钟 := X创建时钟类()
 	时间统计 := X创建时间统计类()
 	i := 0
 	时钟.X创建(func() bool {

@@ -15,7 +15,7 @@ type X正则表达式 struct {
 	被搜索的文本         string
 }
 
-func X创建正则表达式(正则表达式文本 string, 被搜索的文本 string) (*X正则表达式, bool) {
+func X创建正则类(正则表达式文本 string, 被搜索的文本 string) (*X正则表达式, bool) {
 	t := new(X正则表达式)
 	b := t.X创建(正则表达式文本, 被搜索的文本)
 	return t, b

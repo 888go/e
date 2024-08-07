@@ -7,24 +7,24 @@ import (
 	"time"
 )
 
-type E时钟 struct {
+type X时钟 struct {
 }
 
-func New时钟() *E时钟 {
-	this := new(E时钟)
+func X创建时钟类() *X时钟 {
+	this := new(X时钟)
 	return this
 }
 
-func (this *E时钟) X创建(fn func() bool, 时钟周期 int64) {
+func (this *X时钟) X创建(fn func() bool, 时钟周期 int64) {
 	cable.SetInterval(fn, time.Duration(时钟周期)*time.Millisecond)
 }
 
-func (this *E时钟) X创建执行一次(fn func(), 时钟周期 int64) {
+func (this *X时钟) X创建执行一次(fn func(), 时钟周期 int64) {
 	cable.SetTimeout(fn, time.Duration(时钟周期)*time.Millisecond)
 }
 
 // 返回一个函数，无论调用多少次，它只会在指定的间隔内执行一次
-func (this *E时钟) X时钟周期函数(fn func(), 时钟周期 int64) func() {
+func (this *X时钟) X时钟周期函数(fn func(), 时钟周期 int64) func() {
 	return cable.Throttle(fn, time.Duration(时钟周期)*time.Millisecond, cable.ThrottleOptions{})
 }
 

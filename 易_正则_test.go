@@ -20,7 +20,7 @@ func TestNew正则表达式(t *testing.T) {
 		X调试输出(zz.X取子匹配文本(4, 3))
 	}
 
-	zz2, flag := X创建正则表达式(`aaa(.*?)bbb(.*?)ccc`, str)
+	zz2, flag := X创建正则类(`aaa(.*?)bbb(.*?)ccc`, str)
 	X调试输出(flag)
 	X调试输出(zz2.X取匹配数量())
 	for i := 0; i < zz2.X取匹配数量(); i++ {
@@ -34,7 +34,7 @@ func TestNew正则表达式(t *testing.T) {
 
 	X调试输出("GetResult", arr)
 
-	zz3, flag := X创建正则表达式(`aaa`, str)
+	zz3, flag := X创建正则类(`aaa`, str)
 
 	arr2 := zz3.X替换("666")
 
