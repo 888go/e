@@ -15,28 +15,28 @@ func New时钟() *E时钟 {
 	return this
 }
 
-func (this *E时钟) E创建(fn func() bool, 时钟周期 int64) {
+func (this *E时钟) X创建(fn func() bool, 时钟周期 int64) {
 	cable.SetInterval(fn, time.Duration(时钟周期)*time.Millisecond)
 }
 
-func (this *E时钟) E创建执行一次(fn func(), 时钟周期 int64) {
+func (this *E时钟) X创建执行一次(fn func(), 时钟周期 int64) {
 	cable.SetTimeout(fn, time.Duration(时钟周期)*time.Millisecond)
 }
 
 // 返回一个函数，无论调用多少次，它只会在指定的间隔内执行一次
-func (this *E时钟) E时钟周期函数(fn func(), 时钟周期 int64) func() {
+func (this *E时钟) X时钟周期函数(fn func(), 时钟周期 int64) func() {
 	return cable.Throttle(fn, time.Duration(时钟周期)*time.Millisecond, cable.ThrottleOptions{})
 }
 
-func E时钟_创建(fn func() bool, 时钟周期 int64) {
+func X时钟_创建(fn func() bool, 时钟周期 int64) {
 	cable.SetInterval(fn, time.Duration(时钟周期)*time.Millisecond)
 }
 
-func E时钟_创建执行一次(fn func(), 时钟周期 int64) {
+func X时钟_创建执行一次(fn func(), 时钟周期 int64) {
 	cable.SetTimeout(fn, time.Duration(时钟周期)*time.Millisecond)
 }
 
 // 返回一个函数，无论调用多少次，它只会在指定的间隔内执行一次
-func E时钟_创建周期函数(fn func(), 时钟周期 int64) func() {
+func X时钟_创建周期函数(fn func(), 时钟周期 int64) func() {
 	return cable.Throttle(fn, time.Duration(时钟周期)*time.Millisecond, cable.ThrottleOptions{})
 }

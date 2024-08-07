@@ -10,13 +10,13 @@ import (
 // 注意，参数<压缩包路径>可以是目录或文件，其中
 // 支持用“，”连接多个路径。
 func Zip压缩到文件(压缩包路径, 目标目录 string, 路径前缀 ...string) error {
-	writer, 临时文件, err := E取临时文件名("")
+	writer, 临时文件, err := X取临时文件名("")
 	if err != nil {
 		return err
 	}
 	err = gcompress.ZipPathWriter(压缩包路径, writer, 路径前缀...)
 	writer.Close()
-	E移动文件(临时文件, 目标目录)
+	X移动文件(临时文件, 目标目录)
 	return err
 }
 

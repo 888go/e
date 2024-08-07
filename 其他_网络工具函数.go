@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-func E取随机ip() string {
+func X取随机ip() string {
 	rand.Seed(time.Now().Unix())
-	ip := fmt.Sprintf("%d.%d.%d.%d", E取随机数(50, 254), E取随机数(50, 254), E取随机数(50, 254), E取随机数(50, 254))
+	ip := fmt.Sprintf("%d.%d.%d.%d", X取随机数(50, 254), X取随机数(50, 254), X取随机数(50, 254), X取随机数(50, 254))
 	return ip
 }

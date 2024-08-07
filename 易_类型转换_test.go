@@ -24,8 +24,8 @@ func TestE到字节(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := E到字节(tt.args.value); got != tt.want {
-				t.Errorf("E到字节() = %v, want %v", got, tt.want)
+			if got := X到字节(tt.args.value); got != tt.want {
+				t.Errorf("X到字节() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -50,8 +50,8 @@ func TestE到字节集(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := E到字节集(tt.args.value); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("E到字节集() = %v, want %v", got, tt.want)
+			if got := X到字节集(tt.args.value); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("X到字节集() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -76,8 +76,8 @@ func TestE到数值(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := E到数值(tt.args.value); got != tt.want {
-				t.Errorf("E到数值() = %v, want %v", got, tt.want)
+			if got := X到数值(tt.args.value); got != tt.want {
+				t.Errorf("X到数值() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -103,8 +103,8 @@ func TestE到整数(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := E到整数(tt.args.value); got != tt.want {
-				t.Errorf("E到整数() = %v, want %v", got, tt.want)
+			if got := X到整数(tt.args.value); got != tt.want {
+				t.Errorf("X到整数() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -130,8 +130,8 @@ func TestE到文本(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := E到文本(tt.args.value); got != tt.want {
-				t.Errorf("E到文本() = %v, want %v", got, tt.want)
+			if got := X到文本(tt.args.value); got != tt.want {
+				t.Errorf("X到文本() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -151,8 +151,8 @@ func TestE到结构体(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := E到结构体(tt.args.待转换的参数, tt.args.结构体指针); (err != nil) != tt.wantErr {
-				t.Errorf("E到结构体() error = %v, wantErr %v", err, tt.wantErr)
+			if err := X到结构体(tt.args.待转换的参数, tt.args.结构体指针); (err != nil) != tt.wantErr {
+				t.Errorf("X到结构体() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})
 	}

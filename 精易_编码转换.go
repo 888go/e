@@ -54,41 +54,41 @@ func X编码URL解析(str string, component int) map[string]string {
 	return s
 }
 
-// E文本编码转换("测试一下","gbk","utf-8")
-func E文本编码转换(str interface{}, 来源编码 string, 目标编码 string) string {
+// X文本编码转换("测试一下","gbk","utf-8")
+func X文本编码转换(str interface{}, 来源编码 string, 目标编码 string) string {
 	if 来源编码 == "" {
-		来源编码 = E编码检测(E到文本(str))
+		来源编码 = X编码检测(X到文本(str))
 		//如果编码是一致的那么就不需要转换了
 		if 来源编码 == 目标编码 {
-			return E到文本(str)
+			return X到文本(str)
 		}
 		if !(来源编码 == "gbk" || 来源编码 == "utf-8") {
-			return E到文本(str)
+			return X到文本(str)
 		}
 	}
 	srcDecoder := mahonia.NewDecoder(来源编码)
 	desDecoder := mahonia.NewDecoder(目标编码)
-	resStr := srcDecoder.ConvertString(E到文本(str))
-	_, resBytes, _ := desDecoder.Translate(E到字节集(resStr), true)
-	return E到文本(resBytes)
+	resStr := srcDecoder.ConvertString(X到文本(str))
+	_, resBytes, _ := desDecoder.Translate(X到字节集(resStr), true)
+	return X到文本(resBytes)
 }
-func E编码是否为gbk(data []byte) bool {
-	return E编码检测(data) == "gbk"
+func X编码是否为gbk(data []byte) bool {
+	return X编码检测(data) == "gbk"
 }
-func E编码是否为utf8(data []byte) bool {
-	return E编码检测(data) == "utf-8"
+func X编码是否为utf8(data []byte) bool {
+	return X编码检测(data) == "utf-8"
 }
 
-func E编码utf8到gbk(str string) string {
+func X编码utf8到gbk(str string) string {
 	gbkData, _ := simplifiedchinese.GBK.NewEncoder().Bytes([]byte(str)) //使用官方库将utf-8转换为gbk
 	return string(gbkData)
 }
 
-func E编码gbk到utf8(str string) string {
+func X编码gbk到utf8(str string) string {
 	gbkData, _ := simplifiedchinese.GBK.NewDecoder().Bytes([]byte(str))
 	return string(gbkData)
 }
 
-func E编码检测(s interface{}) string {
-	return chardet.Mostlike(E到字节集(s))
+func X编码检测(s interface{}) string {
+	return chardet.Mostlike(X到字节集(s))
 }

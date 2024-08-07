@@ -1,5 +1,5 @@
 package e
 
 func ExampleE结束() {
-	E结束()
+	X结束()
 }

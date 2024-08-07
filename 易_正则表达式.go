@@ -2,7 +2,7 @@ package e
 
 import "regexp"
 
-type E正则表达式 struct {
+type X正则表达式 struct {
 	//正则
 	r *regexp.Regexp
 	//返回结果
@@ -15,12 +15,12 @@ type E正则表达式 struct {
 	被搜索的文本         string
 }
 
-func New正则表达式(正则表达式文本 string, 被搜索的文本 string) (*E正则表达式, bool) {
-	t := new(E正则表达式)
-	b := t.E创建(正则表达式文本, 被搜索的文本)
+func X创建正则表达式(正则表达式文本 string, 被搜索的文本 string) (*X正则表达式, bool) {
+	t := new(X正则表达式)
+	b := t.X创建(正则表达式文本, 被搜索的文本)
 	return t, b
 }
-func (this *E正则表达式) E创建(正则表达式文本 string, 被搜索的文本 string) bool {
+func (this *X正则表达式) X创建(正则表达式文本 string, 被搜索的文本 string) bool {
 	this.正则表达式文本 = 正则表达式文本
 	this.被搜索的文本 = 被搜索的文本
 
@@ -33,13 +33,13 @@ func (this *E正则表达式) E创建(正则表达式文本 string, 被搜索的
 	this.SubmatchCount2 = len(this.res[0])
 	return true
 }
-func (this *E正则表达式) E取匹配数量() int {
+func (this *X正则表达式) X取匹配数量() int {
 	return len(this.res)
 }
-func (this *E正则表达式) E取匹配文本(匹配索引 int) string {
+func (this *X正则表达式) X取匹配文本(匹配索引 int) string {
 	return this.res[匹配索引][0]
 }
-func (this *E正则表达式) E取子匹配文本(匹配索引 int, 子表达式索引 int) string {
+func (this *X正则表达式) X取子匹配文本(匹配索引 int, 子表达式索引 int) string {
 	if -1 >= 匹配索引 || -1 >= 子表达式索引 {
 		return ""
 	}
@@ -49,15 +49,15 @@ func (this *E正则表达式) E取子匹配文本(匹配索引 int, 子表达式
 
 	return this.res[匹配索引][子表达式索引]
 }
-func (this *E正则表达式) E取子匹配数量() int {
+func (this *X正则表达式) X取子匹配数量() int {
 	return this.SubmatchCount2
 }
 
-func (this *E正则表达式) GetResult() [][]string {
+func (this *X正则表达式) GetResult() [][]string {
 	return this.res
 }
 
-func (this *E正则表达式) E替换(用作替换的文本 string) string {
+func (this *X正则表达式) X替换(用作替换的文本 string) string {
 	r, _ := regexp.Compile(this.正则表达式文本)
 	str := r.ReplaceAllString(this.被搜索的文本, 用作替换的文本)
 	return str

@@ -8,11 +8,11 @@ import (
 	"time"
 )
 
-func E延时(欲等待的时间 int64) {
-	time.Sleep(time.Duration(欲等待的时间) * time.Millisecond)
+func X延时(欲等待毫秒 int64) {
+	time.Sleep(time.Duration(欲等待毫秒) * time.Millisecond)
 }
 
-func E运行_win(欲运行的命令行 string, 是否等待程序运行完毕 bool) string {
+func X运行_win(欲运行的命令行 string, 是否等待程序运行完毕 bool) string {
 	var err error
 	//cmd := exec.Command("cmd")
 	cmd := exec.Command("powershell")
@@ -36,14 +36,14 @@ func E运行_win(欲运行的命令行 string, 是否等待程序运行完毕 bo
 		}
 	}
 
-	rt := E文本编码转换(out.String(), "gbk", "utf-8")
+	rt := X文本编码转换(out.String(), "gbk", "utf-8")
 	//fmt.Println(rt)
 
 	return rt
 }
 
 // 模拟终端的输入输出
-func E运行_mac(欲运行的命令行 string, 是否等待程序运行完毕 bool, fc interface{}) string {
+func X运行_mac(欲运行的命令行 string, 是否等待程序运行完毕 bool, fc interface{}) string {
 	// 启动一个新的进程运行命令
 	cmd := exec.Command("bash", "-c", 欲运行的命令行)
 
