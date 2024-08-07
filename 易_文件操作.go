@@ -184,7 +184,7 @@ func X复制目录(被复制的目录名称 string, 复制到的目录名称 str
 	return err
 }
 
-func E路径合并(elem ...string) string {
+func X路径合并(elem ...string) string {
 	return path.Join(elem...)
 }
 func X创建目录多级(欲创建的目录名称 string) error {
